@@ -1,9 +1,7 @@
-from django.contrib import admin
-from django.urls import path, include
-
-from . import views
+from django.urls import path
+from .views import NewsList, NewsDetail
 
 urlpatterns = [
-    path('', views.get_news, name='get_all_users'),  
-    path('<str:id>', views.get_by_id)
+    path('noticias/', NewsList.as_view(), name='news-list'),
+    path('noticias/<uuid:pk>/', NewsDetail.as_view(), name='news-detail'),
 ]
