@@ -10,3 +10,15 @@ from .serializers import NewsSerializer
 
 import json
 
+@api_view(['GET'])
+def get_news(request):
+
+    if request.method == 'GET':
+
+        news = News.objects.all()
+
+        serializer = NewsSerializer(news, many=True)
+
+        return Response(serializer.data)
+    
+    return Response(status=status.HTTP_400_BAD_REQUEST)
