@@ -17,15 +17,14 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
 
-      - name: Build and run the container for tests
-        uses: docker/build-push-action@v2
-        with:
-          context: .
-          file: ./Dockerfile
-          push: false
-          tags: test-django
+      - name: Docker Build
+        run: |
+          docker-compose build  # Construir a imagem
+
+      - name: Run migrations
+        run: |
+          docker-compose run web python manage.py migrate
 
       - name: Run tests
         run: |
-          docker run --rm test-django python manage.py migrate
-          docker run --rm test-django python manage.py test api_rest
+          docker-compose run web python manage.py test api_rest
