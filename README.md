@@ -216,4 +216,4 @@ python manage.py test api_rest
 ![Test](https://github.com/user-attachments/assets/e52cbd5c-3fdb-4245-968f-141aa651ddd2)
 
 ## Executando no CI
-![CI](https://github.com/user-attachments/assets/1e71f1d8-c386-423e-80dc-4dd1410eaafa)
+![CI2](https://github.com/user-attachments/assets/91642896-566f-41c6-b9ec-ce82cf0e8731)
