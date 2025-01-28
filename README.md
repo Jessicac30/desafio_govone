@@ -104,14 +104,7 @@ pip install -r requirements.txt
 ### Realizar as migrações do banco de dados:
 ```ruby
 python manage.py migrate
-``` 
-
-### Criar um super usuário (opcional): 
-> Se você desejar acessar o painel administrativo do Django, pode criar um superusuário com o comando:
-```ruby
-python manage.py createsuperuser
 ```
-Siga as instruções para definir um nome de usuário, e-mail e senha.
 
 ## Executar o servidor de desenvolvimento: 
 
