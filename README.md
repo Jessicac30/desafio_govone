@@ -134,7 +134,6 @@ docker-compose up --build
 docker-compose up
 ```
 
-
 <h1 align="center">
 Acessando os endpoints da API
 </h1>
@@ -205,3 +204,16 @@ curl -X 'DELETE' \
   -H 'accept: application/json' \
   -H 'X-CSRFTOKEN: vh4v5YHQnw4W0pG3oiwdykugbLUCj33KKv8oH3e9Itl3zzNN5jkJGFL3NwvV9vZ1'
 ```
+
+<h1 align="center">
+Executar os testes
+</h1>
+
+> Para executar os teste
+```ruby
+python manage.py test api_rest
+```
+![Test](https://github.com/user-attachments/assets/e52cbd5c-3fdb-4245-968f-141aa651ddd2)
+
+## Executando no CI
+![CI](https://github.com/user-attachments/assets/1e71f1d8-c386-423e-80dc-4dd1410eaafa)
